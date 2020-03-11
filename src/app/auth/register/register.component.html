@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="login">
+      <div class="login-triangle"></div>
+      
+      <h2 class="login-header">REGISTRO</h2>
+    
+      <form #frLogin="ngForm" class="login-container" (ngSubmit)="registerUser(frLogin)"
+      [formGroup]="formRegi">
+        
+        <p><input type="text" placeholder="Nombre" formControlName = "nombre" class="validInput" [class.invalidInput] = "formRegi.get('nombre').touched && formRegi.get('nombre').invalid"></p>
+        <p><input type="number" placeholder="Edad" formControlName = "edad" class="validInput" [class.invalidInput] = "formRegi.get('edad').touched && formRegi.get('edad').invalid"></p>
+        <p><input type="email" placeholder="Correo" formControlName = "correo" class="validInput" [class.invalidInput] = "formRegi.get('correo').touched && formRegi.get('correo').invalid"></p>
+        <p><input type="text" placeholder="Usuario" formControlName = "usuario" class="validInput" [class.invalidInput] = "formRegi.get('usuario').touched && formRegi.get('usuario').invalid"></p>
+        <p><input type="password" placeholder="Contraseña" formControlName = "contrasena" class="validInput" [class.invalidInput] = "formRegi.get('contrasena').touched && formRegi.get('contrasena').invalid"></p>
+  
+        <p><input type="submit" value="Registrarme"></p>
+        <p><button type="button" name="boton" (click)="backLogin()">Atras</button></p>
+  
+      </form>
+    </div>
+  </div>

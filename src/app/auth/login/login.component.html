@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="login">
+    <div class="login-triangle"></div>
+    
+    <h2 class="login-header">INICIAR SESION</h2>
+  
+    <form #frLogin="ngForm" class="login-container" (ngSubmit)="onLogin(frLogin)">
+      
+      <p><input type="text" name="user" placeholder="Usuario" class="validInput" ngModel required></p>
+      <p><input type="password" name="pass" placeholder="Contraseña" class="validInput" ngModel required></p>
+
+      <p class="errorText" [hidden] = "errorUser">
+        <strong>Intenta de nuevo:</strong> Usuario o contraseña incorrecta.
+      </p>
+
+      <p><input type="submit" value="Entrar"></p>
+
+      <p><button name="boton" (click)="goToRegister()" >Registrarse</button></p>
+
+    </form>
+    
+  </div>
+</div>
